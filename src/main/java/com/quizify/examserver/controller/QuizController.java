@@ -40,7 +40,7 @@ public class QuizController {
     }
 
     // get all quizzes
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<Set<Quiz>> getQuizzes() {
         Set<Quiz> quizzes = this.quizService.getQuizzes();
         return new ResponseEntity<>(quizzes, HttpStatus.OK);

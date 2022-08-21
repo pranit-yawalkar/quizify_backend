@@ -62,7 +62,7 @@ public class QuizifyApplication implements CommandLineRunner {
 	public CorsFilter corsFilter() {
 		final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		final CorsConfiguration config = new CorsConfiguration();
-		config.setAllowedOrigins(Collections.singletonList("http://localhost:4200")); // Provide list of origins if you want multiple origins
+		config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "https://quizifyapp.herokuapp.com")); // Provide list of origins if you want multiple origins
 		config.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"));
 		config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH"));
 		config.setAllowCredentials(true);

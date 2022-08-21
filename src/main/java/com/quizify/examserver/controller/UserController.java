@@ -24,6 +24,12 @@ public class UserController {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    // for testing
+    @GetMapping("/test")
+    public String testing() {
+        return "Quizify is running successfully!";
+    }
+
     /**
      * Create User Method
      */

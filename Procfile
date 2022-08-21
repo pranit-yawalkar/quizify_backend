@@ -1,1 +1,1 @@
-web: java -cp target/classes/;target/dependency/* com.quizify.examserver.QuizifyApplication
+web: java -cp target/classes/:target/dependency/* com.quizify.examserver.QuizifyApplication

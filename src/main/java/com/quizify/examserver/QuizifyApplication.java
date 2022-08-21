@@ -1,5 +1,8 @@
 package com.quizify.examserver;
 
+import com.quizify.examserver.model.user.Role;
+import com.quizify.examserver.model.user.User;
+import com.quizify.examserver.model.user.UserRole;
 import com.quizify.examserver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -13,6 +16,8 @@ import org.springframework.web.filter.CorsFilter;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 @SpringBootApplication
 public class QuizifyApplication implements CommandLineRunner {
@@ -29,28 +34,28 @@ public class QuizifyApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-//		System.out.println("********************************");
-//		User user = new User();
-//		user.setFirstName("admin");
-//		user.setLastName("admin");
-//		user.setEmail("admin@quizify.com");
-//		user.setUsername("admin");
-//		user.setPassword(this.bCryptPasswordEncoder.encode("Admin#123"));
-//		user.setPhone("986651656");
-//		user.setProfile("default.png");
-//
-//		Role role = new Role();
-//		role.setRoleName("ADMIN");
-//
-//		UserRole userRole = new UserRole();
-//		userRole.setRole(role);
-//		userRole.setUser(user);
-//
-//		Set<UserRole> userRoles = new HashSet<>();
-//		userRoles.add(userRole);
-//
-//		User user1 = this.userService.createUser(user, userRoles);
-//		System.out.println(user1);
+		System.out.println("********************************");
+		User user = new User();
+		user.setFirstName("admin");
+		user.setLastName("admin");
+		user.setEmail("admin@quizify.com");
+		user.setUsername("admin");
+		user.setPassword(this.bCryptPasswordEncoder.encode("Admin#123"));
+		user.setPhone("986651656");
+		user.setProfile("default.png");
+
+		Role role = new Role();
+		role.setRoleName("ADMIN");
+
+		UserRole userRole = new UserRole();
+		userRole.setRole(role);
+		userRole.setUser(user);
+
+		Set<UserRole> userRoles = new HashSet<>();
+		userRoles.add(userRole);
+
+		User user1 = this.userService.createUser(user, userRoles);
+		System.out.println(user1);
 	}
 
 	@Bean

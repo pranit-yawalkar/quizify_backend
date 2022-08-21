@@ -79,16 +79,6 @@
 				<!-- Build an executable JAR -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-<!--				<version>3.2.2</version>-->
-<!--				<configuration>-->
-<!--					<archive>-->
-<!--						<manifest>-->
-<!--							<addClasspath>true</addClasspath>-->
-<!--							<classpathPrefix>lib/</classpathPrefix>-->
-<!--							<mainClass>com.quizify.examserver.QuizifyApplication</mainClass>-->
-<!--						</manifest>-->
-<!--					</archive>-->
-<!--				</configuration>-->
 			</plugin>
 		</plugins>
 	</build>
